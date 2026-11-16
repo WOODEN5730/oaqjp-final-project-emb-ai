@@ -13,10 +13,24 @@ def emotion_detector_route():
 
     text_to_analyze = request.args.get('textToAnalyze')
 
-    if not text_to_analyze:
-        return jsonify({"error": "Please provide text to analyze."}), 400
+  # Handle blank input
+    if not text_to_analyze or not text_to_analyze.strip():
+        return jsonify({
+            'anger': None,
+            'disgust': None,
+            'fear': None,
+            'joy': None,
+            'sadness': None,
+            'dominant_emotion': None,
+            'error': 'Please provide text to analyze.'
+        }), 400
 
     response = emotion_detector(text_to_analyze)
+
+    if response is None:
+        return jsonify({
+            'error': 'Unable to analyze the text.'
+        }), 500
 
     return jsonify(response)
 
