@@ -1,0 +1,7 @@
+pylint server.py
+------------------------------------
+Your code has been rated at 10.00/10
+
+pylint  emotion_detection.py
+------------------------------------
+Your code has been rated at 10.00/10
