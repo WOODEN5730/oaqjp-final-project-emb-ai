@@ -1,4 +1,3 @@
-
 from EmotionDetection.emotion_detection import emotion_detector
 
 tests = [
@@ -6,7 +5,7 @@ tests = [
     "I am extremely sad.",
     "I am afraid of the situation.",
     "I am angry about this."
-]
+] 
 
 for text in tests:
     print("\nInput:", text)

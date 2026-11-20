@@ -20,3 +20,6 @@ Requests library
 IBM Watson Emotion Detection API
 JSON
 Git and GitHub
+
+.\.venv\Scripts\Activate.ps1
+.venv\Scripts\activate.bat
